@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js"></script>
+  <script src="script.js" defer></script>
+	<title>Заметки</title>
+</head>
+<body>
+  <div class="p-4">
+    <h1 class="text-3xl mb-2">Заметки:</h1>
+    <form class='w-fit'>
+      <div class="flex mb-2">
+        <input class="border py-1 px-2" name="text" type="text" placeholder='Добавить заметку'>
+        <button name='add' class="w-8 bg-slate-500 text-white">
+          <iconify-icon icon="material-symbols:add"></iconify-icon>
+        </button>
+      </div>
+      <ol id="todo-list" class="empty:hidden peer"></ol>
+      <button class="w-full border mt-2 py-1 peer-[:empty]:hidden" name="remove-all">Удалить все</button>
+      <p class="peer-[:not(:empty)]:hidden">Нет заметок</p>
+    </form>
+  </div>
+</body>
+</html>
